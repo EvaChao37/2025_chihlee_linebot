@@ -15,5 +15,5 @@ with gr.Blocks() as demo:
     )
     def greet(name):
         return name + "您好！"
-
+##decorator寫法，後面要直接加上function
 demo.launch()
