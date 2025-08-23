@@ -77,7 +77,7 @@ def chat():
         return jsonify({'error': '未輸入問題'}), 400
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash", contents=f"{question},回應請輸出成為html格式,請記得您的名字是`Eva 小助手,請用繁體中文回答`"
+            model="gemini-2.5-flash", contents=f"{question},回應請輸出成為html格式,請記得您的名字是Eva 小助手,請用繁體中文回答"
         )
         html_format = response.text.replace("```html","").replace("```","")
         return jsonify({'html': html_format})
